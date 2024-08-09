@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 import '../../../../../core/utils/app_assets.dart';
 import '../../../../../core/utils/app_colors.dart';
@@ -13,10 +14,10 @@ class DownloaderBodyLogo extends StatelessWidget {
         color: AppColors.primaryColor.withOpacity(.1),
         borderRadius: BorderRadius.circular(50),
       ),
-      child: const Image(
-        width: 250,
-        height: 250,
-        image: AssetImage(AppAssets.tikTokLogo),
+      child: Lottie.asset(
+        AppAssets.tikTokLogo,
+        width: 300,
+        height: 300,
       ),
     );
   }

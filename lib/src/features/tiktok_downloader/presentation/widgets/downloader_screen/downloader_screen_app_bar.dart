@@ -14,7 +14,7 @@ class DownloaderScreenAppBar extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: const Text(AppStrings.appName),
+      title: const Text(AppStrings.appName, style: TextStyle(fontSize: 20, color: AppColors.white)),
       actions: [
         BlocBuilder<DownloaderBloc, DownloaderState>(
           builder: (context, state) {

@@ -43,20 +43,32 @@ class DownloaderBodyInputField extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              IconButton(
-                onPressed: onSearch,
-                icon: const Icon(Icons.search),
-                tooltip: 'Buscar',
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: IconButton(
+                  onPressed: onSearch,
+                  icon: const Icon(Icons.search),
+                  tooltip: 'Buscar',
+                ),
               ),
-              IconButton(
-                onPressed: () async {
-                  ClipboardData? clipboardData = await Clipboard.getData('text/plain');
-                  if (clipboardData != null) {
-                    videoLinkController.text = clipboardData.text ?? '';
-                  }
-                },
-                icon: const Icon(Icons.paste),
-                tooltip: 'Pegar',
+              Container(
+                decoration: BoxDecoration(
+                  color: Colors.grey[300],
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: IconButton(
+                  onPressed: () async {
+                    ClipboardData? clipboardData = await Clipboard.getData('text/plain');
+                    if (clipboardData != null) {
+                      videoLinkController.text = clipboardData.text ?? '';
+                    }
+                  },
+                  icon: const Icon(Icons.paste),
+                  tooltip: 'Pegar',
+                ),
               ),
             ],
           ),

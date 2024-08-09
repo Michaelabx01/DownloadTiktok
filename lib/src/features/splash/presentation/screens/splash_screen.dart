@@ -70,7 +70,7 @@ class _SplashScreenState extends State<SplashScreen>
             width: 100,
             height: 100,
             fit: BoxFit.scaleDown,
-            image: AssetImage(AppAssets.tikTokLogo),
+            image: AssetImage(AppAssets.tikTokLogoPng),
           ),
         ),
       ),
